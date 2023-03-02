@@ -1,24 +1,7 @@
 # This code include supporting function of back subsctitutions
 
-
 # Implement BACK SUBS
 def backsubs(U, b):
-
-  """
-  x = backsubs(U, b)
-  Apply back substitution for the square upper triangular system Ux=b. 
-
-  Parameters
-  -------
-    U: nxn square upper triangular array
-    b: n array
-    
-
-  Returns
-  -------
-    x: n array
-  """
-
   n= U.shape[1]
   x= np.zeros((n,))
   b_copy= np.copy(b)
@@ -39,8 +22,7 @@ def backsubs(U, b):
       x[i]= b_copy[i]/U[i,i]
   return x
 
-
-  # Add ones
+# Add ones
 def add_ones(X):
   matrix = np.ones((len(X), len(X[0])+1 ))
   matrix[:, 1:] =X
